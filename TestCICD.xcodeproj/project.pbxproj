@@ -14,6 +14,10 @@
 		E7D5A8B62D10E1D30039F944 /* TestCICDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D5A8B52D10E1D30039F944 /* TestCICDTests.swift */; };
 		E7D5A8C02D10E1D30039F944 /* TestCICDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D5A8BF2D10E1D30039F944 /* TestCICDUITests.swift */; };
 		E7D5A8C22D10E1D30039F944 /* TestCICDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D5A8C12D10E1D30039F944 /* TestCICDUITestsLaunchTests.swift */; };
+		E7D5A8D12D10E4380039F944 /* AppCenterAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E7D5A8D02D10E4380039F944 /* AppCenterAnalytics */; };
+		E7D5A8D32D10E4380039F944 /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = E7D5A8D22D10E4380039F944 /* AppCenterCrashes */; };
+		E7D5A8D52D10E4380039F944 /* AppCenterDistribute in Frameworks */ = {isa = PBXBuildFile; productRef = E7D5A8D42D10E4380039F944 /* AppCenterDistribute */; };
+		E7D5A8D72D10E48B0039F944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D5A8D62D10E48B0039F944 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		E7D5A8BB2D10E1D30039F944 /* TestCICDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCICDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D5A8BF2D10E1D30039F944 /* TestCICDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCICDUITests.swift; sourceTree = "<group>"; };
 		E7D5A8C12D10E1D30039F944 /* TestCICDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCICDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7D5A8CE2D10E2990039F944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E7D5A8D62D10E48B0039F944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D5A8D12D10E4380039F944 /* AppCenterAnalytics in Frameworks */,
+				E7D5A8D32D10E4380039F944 /* AppCenterCrashes in Frameworks */,
+				E7D5A8D52D10E4380039F944 /* AppCenterDistribute in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +103,12 @@
 		E7D5A8A32D10E1D20039F944 /* TestCICD */ = {
 			isa = PBXGroup;
 			children = (
+				E7D5A8CE2D10E2990039F944 /* Info.plist */,
 				E7D5A8A42D10E1D20039F944 /* TestCICDApp.swift */,
 				E7D5A8A62D10E1D20039F944 /* ContentView.swift */,
 				E7D5A8A82D10E1D30039F944 /* Assets.xcassets */,
 				E7D5A8AA2D10E1D30039F944 /* Preview Content */,
+				E7D5A8D62D10E48B0039F944 /* AppDelegate.swift */,
 			);
 			path = TestCICD;
 			sourceTree = "<group>";
@@ -143,6 +154,11 @@
 			dependencies = (
 			);
 			name = TestCICD;
+			packageProductDependencies = (
+				E7D5A8D02D10E4380039F944 /* AppCenterAnalytics */,
+				E7D5A8D22D10E4380039F944 /* AppCenterCrashes */,
+				E7D5A8D42D10E4380039F944 /* AppCenterDistribute */,
+			);
 			productName = TestCICD;
 			productReference = E7D5A8A12D10E1D20039F944 /* TestCICD.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +231,9 @@
 				Base,
 			);
 			mainGroup = E7D5A8982D10E1D20039F944;
+			packageReferences = (
+				E7D5A8CF2D10E4380039F944 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */,
+			);
 			productRefGroup = E7D5A8A22D10E1D20039F944 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D5A8D72D10E48B0039F944 /* AppDelegate.swift in Sources */,
 				E7D5A8A72D10E1D20039F944 /* ContentView.swift in Sources */,
 				E7D5A8A52D10E1D20039F944 /* TestCICDApp.swift in Sources */,
 			);
@@ -425,6 +445,7 @@
 				DEVELOPMENT_TEAM = HFKH24VMR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestCICD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +475,7 @@
 				DEVELOPMENT_TEAM = HFKH24VMR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestCICD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +610,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E7D5A8CF2D10E4380039F944 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/microsoft/appcenter-sdk-apple";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7D5A8D02D10E4380039F944 /* AppCenterAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7D5A8CF2D10E4380039F944 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterAnalytics;
+		};
+		E7D5A8D22D10E4380039F944 /* AppCenterCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7D5A8CF2D10E4380039F944 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterCrashes;
+		};
+		E7D5A8D42D10E4380039F944 /* AppCenterDistribute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7D5A8CF2D10E4380039F944 /* XCRemoteSwiftPackageReference "appcenter-sdk-apple" */;
+			productName = AppCenterDistribute;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7D5A8992D10E1D20039F944 /* Project object */;
 }
